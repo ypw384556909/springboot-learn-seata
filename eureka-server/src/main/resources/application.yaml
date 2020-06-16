@@ -1,0 +1,27 @@
+server:
+  port: 8761
+#  servlet:
+#    path: /
+
+spring:
+  application:
+    name: ypw-eureka-server
+
+eureka:
+  server:
+  #eviction-interval-timer-in-ms: 60000
+  #enable-self-preservation: false
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    #By default, the registry will also attempt to register itself, so you’ll need to disable that, as well.
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    #statusPageUrlPath: /info
+    #healthCheckUrlPath: /health
+    #lease-renewal-interval-in-seconds: 30
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+
